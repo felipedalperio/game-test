@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <title>Multiplayer Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css" type="text/css">
+  </head>
+  <body>
+
+    <div class="game-container">
+    </div>
+    <div class="player-info">
+      <div>
+        <label for="player-name">Your Name</label>
+        <input id="player-name" maxlength="10" type="text" />
+      </div>
+      <div>
+        <button id="player-color">Change Color</button>
+      </div>
+    </div>
+    <div class="chat">
+        <div class="chat-conversas">
+            
+        </div>
+        <div class="enviar">
+            <input placeholder="Escreva algo" class="texto-escrito">
+            <button class="enviar-texto">Enviar</button>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+    <script>
+      // NOTE - INCLUDE YOUR FIREBASE CONFIG HERE FOR ANYTHING TO WORK:
+      const firebaseConfig = {
+        apiKey: "AIzaSyBplPXOOVRRZbBOERRSzeO0Al_MpPw6D4c",
+        authDomain: "multiplayer-demo-f3bd1.firebaseapp.com",
+        databaseURL: "https://multiplayer-demo-f3bd1-default-rtdb.firebaseio.com",
+        projectId: "multiplayer-demo-f3bd1",
+        storageBucket: "multiplayer-demo-f3bd1.appspot.com",
+        messagingSenderId: "667611583342",
+        appId: "1:667611583342:web:44b6cab96050c02360e77f",
+        measurementId: "G-CRMSYD3M4C"
+      };
+      firebase.initializeApp(firebaseConfig);
+    </script>
+
+  
+    <script src="./KeyPressListener.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
